@@ -44,6 +44,7 @@ EARLY_PRINTK_vexpress       := pl011,0x1c090000
 EARLY_PRINTK_xgene-mcdivitt := 8250,0x1c021000,2
 EARLY_PRINTK_xgene-storm    := 8250,0x1c020000,2
 EARLY_PRINTK_zynqmp         := cadence,0xff000000
+EARLY_PRINTK_meson          := meson,0xc81004c0
 
 ifneq ($(EARLY_PRINTK_$(CONFIG_EARLY_PRINTK)),)
 EARLY_PRINTK_CFG := $(subst $(comma), ,$(EARLY_PRINTK_$(CONFIG_EARLY_PRINTK)))

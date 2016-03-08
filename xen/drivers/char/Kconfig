@@ -56,3 +56,12 @@ config HAS_EHCI
 	help
 	  This selects the USB based EHCI debug port to be used as a UART. If
 	  you have an x86 based system with USB, say Y.
+
+# Meson UART support
+config HAS_MESON
+	bool
+	default y
+	depends on ARM_64
+	help
+	  This selects the Amlogic Meson UART. If you have a Amlogic Meson based
+	  board, say Y.
